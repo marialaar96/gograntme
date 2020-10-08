@@ -1,0 +1,29 @@
+{
+  "name": "gograntme",
+  "version": "1.0.0",
+  "description": "Collection of journalism grants.",
+  "main": "index.html",
+  "dependencies": {
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pug -w ./pug -o ./public -P"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marialaar96/gograntme.git"
+  },
+  "keywords": [
+    "journalism",
+    "grant",
+    "grants"
+  ],
+  "author": "Maria Laar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marialaar96/gograntme/issues"
+  },
+  "homepage": "https://github.com/marialaar96/gograntme#readme"
+}
