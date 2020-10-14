@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        include components/meta.pug
+        link(rel="stylesheet", href="styles/index.css")
+        link(rel="stylesheet", href="styles/nav.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css")
         title GoGrantMe: Home
     body
-        h1 GoGrantMe
+        .wrapper
+            include components/nav.pug
+
+
+            .content
+        .footer
+            p Gograntme.com 2020
+    
+        script(src="scripts/nav.js")
