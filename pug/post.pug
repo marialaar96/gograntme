@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include components/meta.pug
+        meta(property="og:title", content="GoGrantMe: Post a grant")
+        meta(property="og:description", content="Easily post a grant and start receiving applications straight to your email.")
+        meta(property="og:url", content="https://gograntme.com")
+        meta(property="og:image", content="#")
+        meta(name="keywords", content="Journalism, Grants, Grant, Apply, Post")
+        include components/general-meta-links.pug
+        link(rel="stylesheet", href="styles/post.css")
+        title GoGrantMe: Post
+    body
+        .wrapper
+            include components/nav.pug
+            .content
+                .post-grant-form
+                    form#form
+                        fieldset
+                            legend.title
+                                h1 Post a grant
+                                p All fields marked with <span>*</span> are required.
+                            
+                            label(for="title") Title of grant<span>*</span>
+                            input.input(type="text", id="title", name="title" required)
+
+                            label(for="deadline") Deadline for application<span>*</span>
+                            input.input(type="date", id="deadline", name="deadline" required)
+
+                            label(for="description") Description of the grant
+                            textarea#description.input(name="description", cols="30", rows="5" required)
+
+                            label(for="number") Number of people the grant is available to
+                            input.input(type="number", id="number", name="number" required)
+
+                            label(for="amount") Grant amount per person £
+                            input.input(type="number", id="amount", name="amount" required)
+
+                            label(for="provision") What applicants can expect
+                            textarea#provision.input(name="provision", cols="30", rows="5" required)
+
+                            label(for="requirements") What is required to apply
+                            textarea#requirements.input(name="requirements", cols="30", rows="5" required)
+
+                            label(for="how") How to apply
+                            textarea#how.input(name="how", cols="30", rows="5" required)
+
+                            label(for="where") Where applicants send their application (e-mail, application link or both)
+                            input(type="email", id="where", name="email" placeholder="example@companyemail.com")
+                            input.input(type="url", id="where", name="url" placeholder="https://www.applicationpage.com")
+
+                    button.post-grant(type="submit" form="form" value="Post Grant") Post Grant
+
+        include components/footer.pug
+        include components/firebase-scripts.pug
+        script(src="scripts/nav.js")

@@ -1,0 +1,36 @@
+.content {
+  max-width: 900px;
+  margin: auto;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.input {
+  margin-bottom: 50px;
+}
+
+.post-grant {
+  margin: 0 0 50px 0;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 1.5rem;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.title p {
+  margin-bottom: 50px;
+}
+
+span {
+  color: red;
+}

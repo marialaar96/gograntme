@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Easily search and apply for journalism grants all over the world."/>
+    <meta name="robots" content="follow, index"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="GoGrantMe"/>
+    <meta http-equiv="content-type" content="text/html"/>
+    <meta property="og:title" content="GoGrantMe: Post a grant"/>
+    <meta property="og:description" content="Easily post a grant and start receiving applications straight to your email."/>
+    <meta property="og:url" content="https://gograntme.com"/>
+    <meta property="og:image" content="#"/>
+    <meta name="keywords" content="Journalism, Grants, Grant, Apply, Post"/>
+    <link rel="stylesheet" href="styles/nav.css"/>
+    <link rel="stylesheet" href="styles/footer.css"/>
+    <link rel="stylesheet" href="styles/general.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles/post.css"/>
+    <title>GoGrantMe: Post</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <ul class="menu">
+          <li class="logo"><a href="index.html">GoGrantMe</a></li>
+          <li class="item"><a href="#">About</a></li>
+          <li class="item"><a href="#">Blog</a></li>
+          <li class="item"><a href="#">Contact</a></li>
+          <li class="item button"><a href="#">Log In</a></li>
+          <li class="item button secondary"><a href="post.html">Submit Grant</a></li>
+          <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+      </nav>
+      <div class="content">
+        <div class="post-grant-form">
+          <form id="form">
+            <fieldset>
+              <legend class="title">
+                <h1>Post a grant</h1>
+                <p>All fields marked with <span>*</span> are required.</p>
+              </legend>
+              <label for="title">Title of grant<span>*</span></label>
+              <input class="input" type="text" id="title" name="title" required="required"/>
+              <label for="deadline">Deadline for application<span>*</span></label>
+              <input class="input" type="date" id="deadline" name="deadline" required="required"/>
+              <label for="description">Description of the grant</label>
+              <textarea class="input" id="description" name="description" cols="30" rows="5" required="required"></textarea>
+              <label for="number">Number of people the grant is available to</label>
+              <input class="input" type="number" id="number" name="number" required="required"/>
+              <label for="amount">Grant amount per person £</label>
+              <input class="input" type="number" id="amount" name="amount" required="required"/>
+              <label for="provision">What applicants can expect</label>
+              <textarea class="input" id="provision" name="provision" cols="30" rows="5" required="required"></textarea>
+              <label for="requirements">What is required to apply</label>
+              <textarea class="input" id="requirements" name="requirements" cols="30" rows="5" required="required"></textarea>
+              <label for="how">How to apply</label>
+              <textarea class="input" id="how" name="how" cols="30" rows="5" required="required"></textarea>
+              <label for="where">Where applicants send their application (e-mail, application link or both)</label>
+              <input type="email" id="where" name="email" placeholder="example@companyemail.com"/>
+              <input class="input" type="url" id="where" name="url" placeholder="https://www.applicationpage.com"/>
+            </fieldset>
+          </form>
+          <button class="post-grant" type="submit" form="form" value="Post Grant">Post Grant</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Gograntme.com 2020</p>
+    </div><!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.24.0/firebase-app.js"></script><!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/7.24.0/firebase-analytics.js"></script><!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+    <script src="scripts/nav.js"></script>
+  </body>
+</html>

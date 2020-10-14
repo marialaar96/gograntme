@@ -1,8 +1,39 @@
 <!DOCTYPE html>
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title GoGrantMe: Home
+        include components/meta.pug
+        meta(property="og:title", content="GoGrantMe")
+        meta(property="og:description", content="Easily search and apply for journalism grants all over the world.")
+        meta(property="og:url", content="https://gograntme.com")
+        meta(property="og:image", content="#")
+        meta(name="keywords", content="Journalism, Grants, Grant, Apply")
+        include components/general-meta-links.pug
+        link(rel="stylesheet", href="styles/index.css")
+        title GoGrantMe
     body
-        h1 GoGrantMe
+        .wrapper
+            include components/nav.pug
+            .content
+                .vertical-center
+                    .content-center
+                        .greeting
+                            h1 Welcome to GoGrantMe!
+                            p Here you can find grants for journalism from all over the UK, all in one place. Start your search by typing in a topic, an interest or a city.
+                        .form
+                            form(role=search)
+                                label(for="site-search") What? Where?
+                                .input
+                                    input(type="search" id="site-search" name="q" aria-label="Search through site content")
+                                    button.main(type="submit") Go
+                    
+                    .how-it-works
+                        div Step 1
+                        div Step 2
+                        div Step 3
+
+
+
+
+        include components/footer.pug
+        include components/firebase-scripts.pug
+        script(src="scripts/nav.js")
