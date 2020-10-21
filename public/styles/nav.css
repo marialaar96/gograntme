@@ -8,7 +8,6 @@
 }
 
 nav {
-<<<<<<< HEAD
   background: #fff;
   padding: 0 60px;
   box-shadow: 0 2px 6px 0 #2021251a;
@@ -16,14 +15,6 @@ nav {
 
 a {
   color: black;
-=======
-  background: green;
-  padding: 0 15px;
-}
-
-a {
-  color: white;
->>>>>>> 73741b75db1c3af0049659827f53c2e3cd1bd2b8
   text-decoration: none;
 }
 
@@ -37,7 +28,6 @@ a {
   padding: 7.5px 10px 7.5px 0;
 }
 
-<<<<<<< HEAD
 .logo a {
   font-family: "Comfortaa";
   font-weight: 700;
@@ -45,8 +35,6 @@ a {
   color: #00baad;
 }
 
-=======
->>>>>>> 73741b75db1c3af0049659827f53c2e3cd1bd2b8
 .item {
   padding: 10px;
 }
@@ -57,11 +45,7 @@ a {
 
 .item:not(.button) a:hover,
 .item a:hover::after {
-<<<<<<< HEAD
   color: #00baad;
-=======
-  color: #ccc;
->>>>>>> 73741b75db1c3af0049659827f53c2e3cd1bd2b8
 }
 
 /* Mobile menu */
@@ -102,13 +86,10 @@ a {
   display: block;
 }
 
-<<<<<<< HEAD
 .button a {
   border-radius: 10px;
 }
 
-=======
->>>>>>> 73741b75db1c3af0049659827f53c2e3cd1bd2b8
 .button.secondary {
   /* divider between buttons and menu links */
   border-bottom: 1px #000 solid;
@@ -171,30 +152,20 @@ a {
     margin: 5px 0;
   }
   .button a {
-<<<<<<< HEAD
     background: #00baad;
     color: #fff;
-=======
-    background: #0080ff;
-    border: 1px royalblue solid;
->>>>>>> 73741b75db1c3af0049659827f53c2e3cd1bd2b8
   }
   .button.secondary {
     border: 0;
   }
   .button.secondary a {
     background: transparent;
-<<<<<<< HEAD
     border: 1px #00baad solid;
     color: #00baad;
-=======
-    border: 1px #0080ff solid;
->>>>>>> 73741b75db1c3af0049659827f53c2e3cd1bd2b8
   }
   .button a:hover {
     text-decoration: none;
   }
-<<<<<<< HEAD
 
   .button.secondary a:hover {
     border: 1px #009090 solid;
@@ -203,11 +174,6 @@ a {
 
   .button:not(.secondary) a:hover {
     background: #009090;
-=======
-  .button:not(.secondary) a:hover {
-    background: royalblue;
-    border-color: darkblue;
->>>>>>> 73741b75db1c3af0049659827f53c2e3cd1bd2b8
   }
 }
 
