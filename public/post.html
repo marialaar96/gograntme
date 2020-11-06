@@ -25,11 +25,10 @@
     <div class="wrapper">
       <nav>
         <ul class="menu">
-          <li class="logo"><a href="index.html">GoGrantMe</a></li>
-          <li class="item"><a href="#">About</a></li>
-          <li class="item"><a href="#">Blog</a></li>
+          <li class="logo"><a href="index.html">GoGrantMe.com</a></li>
+          <li class="item"><a href="about.html">About</a></li>
           <li class="item"><a href="#">Contact</a></li>
-          <li class="item button"><a href="#">Log In</a></li>
+          <li class="item button"><a href="login.html">Log In</a></li>
           <li class="item button secondary"><a href="post.html">Submit Grant</a></li>
           <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
         </ul>
@@ -43,22 +42,22 @@
                 <p>All fields marked with <span>*</span> are required.</p>
               </legend>
               <label for="title">Title of grant<span>*</span></label>
-              <input class="input" type="text" id="title" name="title" required="required"/>
+              <input class="input" type="text" id="title" name="title" placeholder="Example title" required="required"/>
               <label for="deadline">Deadline for application<span>*</span></label>
               <input class="input" type="date" id="deadline" name="deadline" required="required"/>
-              <label for="description">Description of the grant</label>
-              <textarea class="input" id="description" name="description" cols="30" rows="5" required="required"></textarea>
-              <label for="number">Number of people the grant is available to</label>
-              <input class="input" type="number" id="number" name="number" required="required"/>
-              <label for="amount">Grant amount per person £</label>
-              <input class="input" type="number" id="amount" name="amount" required="required"/>
-              <label for="provision">What applicants can expect</label>
-              <textarea class="input" id="provision" name="provision" cols="30" rows="5" required="required"></textarea>
-              <label for="requirements">What is required to apply</label>
-              <textarea class="input" id="requirements" name="requirements" cols="30" rows="5" required="required"></textarea>
-              <label for="how">How to apply</label>
-              <textarea class="input" id="how" name="how" cols="30" rows="5" required="required"></textarea>
-              <label for="where">Where applicants send their application (e-mail, application link or both)</label>
+              <label for="description">Description of the grant<span>*</span></label>
+              <textarea class="input" id="description" name="description" cols="30" rows="5" placeholder="Some short description about the organization and what the grant is about" required="required"></textarea>
+              <label for="number">Number of people the grant is available to<span>*</span></label>
+              <input class="input" type="number" id="number" name="number" placeholder="10" required="required"/>
+              <label for="amount">Grant amount per person<span>*</span></label>
+              <input class="input" type="number" id="amount" name="amount" placeholder="£ 1,000" required="required"/>
+              <label for="provision">What applicants can expect<span>*</span></label>
+              <textarea class="input" id="provision" name="provision" cols="30" rows="5" placeholder="What applicants will receive when they are successful" required="required"></textarea>
+              <label for="requirements">What is required to apply<span>*</span></label>
+              <textarea class="input" id="requirements" name="requirements" cols="30" rows="5" placeholder="Criteria for candidates to be eligible to apply" required="required"></textarea>
+              <label for="how">How to apply<span>*</span></label>
+              <textarea class="input" id="how" name="how" cols="30" rows="5" placeholder="Details about what to submit and where" required="required"></textarea>
+              <label for="where">Where applicants send their application (e-mail, application link or both)<span>*</span></label>
               <input type="email" id="where" name="email" placeholder="example@companyemail.com"/>
               <input class="input" type="url" id="where" name="url" placeholder="https://www.applicationpage.com"/>
             </fieldset>

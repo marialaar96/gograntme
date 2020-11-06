@@ -1,8 +1,11 @@
+body {
+  background-color: #fbfbfb;
+}
 .content {
   max-width: 900px;
   margin: auto;
   position: relative;
-  height: calc(100vh - 71.4px);
+  height: calc(100vh - 141.4px);
 }
 
 .vertical-center {
@@ -67,13 +70,17 @@ button.main {
   border-radius: 10px;
   margin: 0;
   border: none;
-  font-size: 24px;
-  color: #fff;
   margin-left: 15px;
+  outline: none;
 }
 
 button.main:hover {
   background: #009090;
+}
+
+button.main a {
+  font-size: 24px;
+  color: #fff;
 }
 
 @media all and (max-width: 1080px) {

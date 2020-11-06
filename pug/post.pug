@@ -22,30 +22,30 @@ html(lang="en")
                                 p All fields marked with <span>*</span> are required.
                             
                             label(for="title") Title of grant<span>*</span>
-                            input.input(type="text", id="title", name="title" required)
+                            input.input(type="text", id="title", name="title" placeholder="Example title" required)
 
                             label(for="deadline") Deadline for application<span>*</span>
                             input.input(type="date", id="deadline", name="deadline" required)
 
-                            label(for="description") Description of the grant
-                            textarea#description.input(name="description", cols="30", rows="5" required)
+                            label(for="description") Description of the grant<span>*</span>
+                            textarea#description.input(name="description", cols="30", rows="5" placeholder="Some short description about the organization and what the grant is about" required)
 
-                            label(for="number") Number of people the grant is available to
-                            input.input(type="number", id="number", name="number" required)
+                            label(for="number") Number of people the grant is available to<span>*</span>
+                            input.input(type="number", id="number", name="number" placeholder="10" required)
 
-                            label(for="amount") Grant amount per person £
-                            input.input(type="number", id="amount", name="amount" required)
+                            label(for="amount") Grant amount per person<span>*</span>
+                            input.input(type="number", id="amount", name="amount" placeholder="£ 1,000" required)
 
-                            label(for="provision") What applicants can expect
-                            textarea#provision.input(name="provision", cols="30", rows="5" required)
+                            label(for="provision") What applicants can expect<span>*</span>
+                            textarea#provision.input(name="provision", cols="30", rows="5" placeholder="What applicants will receive when they are successful" required)
 
-                            label(for="requirements") What is required to apply
-                            textarea#requirements.input(name="requirements", cols="30", rows="5" required)
+                            label(for="requirements") What is required to apply<span>*</span>
+                            textarea#requirements.input(name="requirements", cols="30", rows="5" placeholder="Criteria for candidates to be eligible to apply" required)
 
-                            label(for="how") How to apply
-                            textarea#how.input(name="how", cols="30", rows="5" required)
+                            label(for="how") How to apply<span>*</span>
+                            textarea#how.input(name="how", cols="30", rows="5" placeholder="Details about what to submit and where" required)
 
-                            label(for="where") Where applicants send their application (e-mail, application link or both)
+                            label(for="where") Where applicants send their application (e-mail, application link or both)<span>*</span>
                             input(type="email", id="where", name="email" placeholder="example@companyemail.com")
                             input.input(type="url", id="where", name="url" placeholder="https://www.applicationpage.com")
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include components/meta.pug
+        meta(property="og:title", content="GoGrantMe")
+        meta(property="og:description", content="Easily search and apply for journalism grants all over the world.")
+        meta(property="og:url", content="https://gograntme.com")
+        meta(property="og:image", content="#")
+        meta(name="keywords", content="Journalism, Grants, Grant, Apply, Search")
+        include components/general-meta-links.pug
+        link(rel="stylesheet", href="styles/grants.css")
+        title GoGrantMe: Search
+    body
+        .wrapper
+            include components/nav.pug
+            .content
+                        .center
+                            .filter
+                                .label
+                                    h3 Filter
+                                .filter-options
+                                    label(for="deadline") Deadline
+                                    input#deadline(type="date", name="deadline")
+                                    label(for="amount") Grant amount
+                                    input#amount(type="number", name="amount")
+                            .list
+                                - const grants = [{title:"Title of the grant", company:"Company name", amount:1000, deadline:"25/05/2021"},{title:"Title of the grant", company:"Company name", amount:1000, deadline:"25/05/2021"},{title:"Title of the grant", company:"Company name", amount:1000, deadline:"25/05/2021"},{title:"Title of the grant", company:"Company name", amount:1000, deadline:"25/05/2021"}]
+                                    .label
+                                        h3 Grants
+                                    .grants
+                                        .container
+                                            each val, index in grants
+                                                .grant
+                                                    .one
+                                                        p= val.title
+                                                        p= `Amount per individual: ${val.amount}`
+                                                        p= `Deadline: ${val.deadline}`
+                                                    .two
+                                                        p= val.company
+                                                        input(type="button", value="Show more")
+                        
+
+
+
+
+        include components/footer.pug
+        include components/firebase-scripts.pug
+        script(src="scripts/nav.js")

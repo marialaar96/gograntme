@@ -11,10 +11,40 @@ fieldset {
 
 .input {
   margin-bottom: 50px;
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #00baad;
+}
+
+.input:focus {
+  border: 3px solid #009090;
+}
+
+input[type="email"] {
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #00baad;
+  margin-bottom: 10px;
+}
+
+input[type="email"]:focus {
+  border: 3px solid #009090;
 }
 
 .post-grant {
   margin: 0 0 50px 0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background: #00baad;
+  color: #fff;
+  outline: none;
+}
+
+.post-grant:hover {
+  background: #009090;
 }
 
 .title {
@@ -33,4 +63,8 @@ fieldset {
 
 span {
   color: red;
+}
+
+.post-grant-form label {
+  margin-bottom: 10px;
 }
