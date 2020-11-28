@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include components/meta.pug
+        meta(property="og:title", content="GoGrantMe")
+        meta(property="og:description", content="Easily search and apply for journalism grants all over the world.")
+        meta(property="og:url", content="https://gograntme.com")
+        meta(property="og:image", content="#")
+        meta(name="keywords", content="Journalism, Grants, Grant, Apply")
+        include components/general-meta-links.pug
+        link(rel="stylesheet", href="styles/login.css")
+        title GoGrantMe: Register
+    body
+        .wrapper
+            include components/nav.pug
+            .content
+                .login-form
+                    form#login
+                        fieldset
+                            legend.title
+                                h1 Register
+
+                            label(for="email") Email
+                            input.input(type="email", id="email", name="email" required)
+                            label(for="password") Password
+                            input.input(type="password", id="password", name="password" required)
+                            button.login(type="submit" form="login") 
+                                a(href="post.html") Register
+                div.redirect
+                    p If you already have an account, 
+                        a(href="login.html") login now.
+
+        include components/footer.pug
+        include components/firebase-scripts.pug
+        script(src="scripts/nav.js")

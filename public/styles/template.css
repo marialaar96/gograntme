@@ -1,0 +1,57 @@
+body {
+  background-color: #fbfbfb;
+}
+.content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.center {
+  margin-top: 50px;
+}
+
+.container {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 6px 0 #2021251a;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.details {
+  margin-top: 20px;
+}
+
+.details p {
+  margin-top: 10px;
+}
+
+.title {
+  text-align: center;
+}
+
+.subtitle {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.apply {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background: #00baad;
+  outline: none;
+}
+
+.grant-content p {
+  margin-bottom: 30px;
+}
+
+.apply a {
+  color: white;
+}
+
+.submit {
+  text-align: center;
+}

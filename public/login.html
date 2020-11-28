@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="styles/general.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"/>
-    <link rel="stylesheet" href="styles/index.css"/>
-    <title>GoGrantMe</title>
+    <link rel="stylesheet" href="styles/login.css"/>
+    <title>GoGrantMe: Login</title>
   </head>
   <body>
     <div class="wrapper">
@@ -34,22 +34,22 @@
         </ul>
       </nav>
       <div class="content">
-        <div class="vertical-center">
-          <div class="content-center">
-            <div class="greeting">
-              <h1>Welcome to GoGrantMe!</h1>
-              <p>Here you can find grants for journalism from all over the UK, all in one place. Start your search by typing in a topic, an interest or a city.</p>
-            </div>
-            <div class="form">
-              <form>
-                <label for="site-search">What? Where?</label>
-                <div class="input">
-                  <input type="search" id="site-search" name="q" aria-label="Search through site content"/>
-                  <button class="main" type="submit"> <a href="grants.html">Go</a></button>
-                </div>
-              </form>
-            </div>
-          </div>
+        <div class="login-form">
+          <form id="login">
+            <fieldset>
+              <legend class="title">
+                <h1>Login</h1>
+              </legend>
+              <label for="email">Email</label>
+              <input class="input" type="email" id="email" name="email" required="required"/>
+              <label for="password">Password</label>
+              <input class="input" type="password" id="password" name="password" required="required"/>
+              <button class="login" type="submit" form="login"> <a href="post.html">Login</a></button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="redirect">
+          <p>If you don't have an account, <a href="register.html">register now.</a></p>
         </div>
       </div>
     </div>

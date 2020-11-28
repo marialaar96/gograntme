@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include components/meta.pug
+        meta(property="og:title", content="GoGrantMe: Apply for a grant")
+        meta(property="og:description", content="Easily post a grant and start receiving applications straight to your email.")
+        meta(property="og:url", content="https://gograntme.com")
+        meta(property="og:image", content="#")
+        meta(name="keywords", content="Journalism, Grants, Grant, Apply")
+        include components/general-meta-links.pug
+        link(rel="stylesheet", href="styles/apply.css")
+        title GoGrantMe: Apply
+    body
+        .wrapper
+            include components/nav.pug
+            .content
+                .apply-grant-form
+                    form#form
+                        fieldset
+                            legend.title
+                                h1 Apply for [Title of grant]
+                                p All fields marked with <span>*</span> are required.
+                            
+                            label(for="fullName") Full Name<span>*</span>
+                            input.input(type="text", id="fname", name="fname" placeholder="Sam Smith" required)
+
+                            label(for="email") E-mail address<span>*</span>
+                            input.input(type="email", id="email", name="email" placeholder="samsmith@email.com" required)
+
+                            label(for="phone") Phone number<span>*</span>
+                            input.input(type="number", id="phone", name="phone" placeholder="07888999000" required)
+
+
+                            label(for="eligibility") Are you eligible to apply for this grant?<span>*</span>
+                            p.warn Make sure you have read the eligibility criteria in the grant description before applying and meet all the points required to apply for this role.
+                            div.radio1
+                                input.input(type="radio" id="yes" name="yes" value="Yes") 
+                                label(for="yes") Yes
+                            div.radio2
+                                input.input(type="radio" id="no" name="no" value="no")
+                                label(for="no") No
+
+                            label(for="experience") Work experience<span>*</span>
+                            textarea#experience.input(name="experience", cols="30", rows="5" placeholder="Provide details of the work you had undertaken and why you will be a suitable candidate for this grant." required)
+
+                            label(for="motivation") Your motivation and proposal<span>*</span>
+                            p.warn Max length 3,000 characters.
+
+                            textarea#motivation.input(name="motivation", cols="30", rows="10", maxlength="3000", placeholder="Provide details of your motivation and proposal you wish to receive a grant for." required)
+
+                            label(for="links") Links to your social media, organisation or websites
+                            input.input(type="url", id="links", name="links")
+                            input.input(type="url", id="links", name="links")
+                            input.input(type="url", id="links", name="links")
+
+                            div.attachments
+                                label(for="files") Attach CV or supporting documents
+                                input(type="file" id="files" name="files" multiple)
+
+                    div.submit
+                        button.apply(type="submit" form="form" value="Apply") Submit Application
+
+    include components/footer.pug
+    include components/firebase-scripts.pug
+    script(src="scripts/nav.js")

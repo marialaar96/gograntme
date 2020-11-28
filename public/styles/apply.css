@@ -1,0 +1,106 @@
+.content {
+  max-width: 900px;
+  margin: auto;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.input {
+  margin-bottom: 50px;
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #00baad;
+}
+
+.input:focus {
+  border: 3px solid #009090;
+}
+
+input[type="email"] {
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #00baad;
+  margin-bottom: 10px;
+}
+
+input[type="email"]:focus {
+  border: 3px solid #009090;
+}
+
+.apply {
+  margin: 0 0 50px 0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background: #00baad;
+  color: #fff;
+  outline: none;
+}
+
+.apply:hover {
+  background: #009090;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 1.5rem;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.title p {
+  margin-bottom: 50px;
+}
+
+span {
+  color: red;
+}
+
+.apply-grant-form label {
+  margin-bottom: 10px;
+}
+
+p.warn {
+  margin: 0 0 10px 0;
+  color: #797979;
+  font-style: italic;
+}
+
+.attachments {
+  text-align: left;
+  margin: 35px 0;
+}
+
+.attachments label {
+  margin-right: 25%;
+}
+
+input#links {
+  margin: 0 0 15px 0;
+}
+
+input#email {
+  margin-bottom: 50px;
+}
+
+input#no,
+input#yes {
+  margin-bottom: 15px;
+}
+
+label[for="experience"] {
+  margin-top: 35px;
+}
+
+.submit {
+  text-align: center;
+}

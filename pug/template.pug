@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include components/meta.pug
+        meta(property="og:title", content="GoGrantMe: [Title of grant]")
+        meta(property="og:description", content="Easily apply for a grant and start communicating with the grant provider.")
+        meta(property="og:url", content="https://gograntme.com/template.html")
+        meta(property="og:image", content="#")
+        meta(name="keywords", content="Journalism, Grants, Grant, Information, Info")
+        include components/general-meta-links.pug
+        link(rel="stylesheet", href="styles/template.css")
+        title GoGrantMe: More Info
+    body
+        .wrapper
+            include components/nav.pug
+            .content
+                .center
+                    .container
+                        .title
+                            h1 Global Health Journalism Grant (Placeholder)
+                        div.details
+                            p Company name: [companyname]
+                            p Grant amount: [amount]
+                            p Deadline: [date]
+
+                        .grant-content
+                            h2.subtitle About
+                            p.
+                                Lorem ipsum dolor sit amet, his ne dicam appetere, te unum duis tantas sit, wisi comprehensam ex sed. Et illud vitae pri, enim animal cum no. At vis vituperata dissentias adversarium, munere praesent est ei, timeam sanctus meliore ut mea. Sed et quod purto, ei cum prima audiam torquatos. Te omnium impedit similique duo, dico iriure duo ad.
+                            h2.subtitle More information
+                            p.
+                                Lorem ipsum dolor sit amet, his ne dicam appetere, te unum duis tantas sit, wisi comprehensam ex sed. Et illud vitae pri, enim animal cum no. At vis vituperata dissentias adversarium, munere praesent est ei, timeam sanctus meliore ut mea. Sed et quod purto, ei cum prima audiam torquatos. Te omnium impedit similique duo, dico iriure duo ad.
+                            h2.subtitle Eligibility criteria
+                            p.
+                                Lorem ipsum dolor sit amet, his ne dicam appetere, te unum duis tantas sit, wisi comprehensam ex sed. Et illud vitae pri, enim animal cum no. At vis vituperata dissentias adversarium, munere praesent est ei, timeam sanctus meliore ut mea. Sed et quod purto, ei cum prima audiam torquatos. Te omnium impedit similique duo, dico iriure duo ad.
+                        div.submit
+                            button.apply(type="submit") 
+                                a(href="template.html") Apply
+
+        include components/footer.pug
+        include components/firebase-scripts.pug
+        script(src="scripts/nav.js")
+
