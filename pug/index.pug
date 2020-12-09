@@ -26,9 +26,16 @@ html(lang="en")
                                     input(type="search" id="site-search" name="q" aria-label="Search through site content")
                                     button.main(type="submit") 
                                         a(href="grants.html") Go
+        
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        script(src="/__/firebase/8.1.2/firebase-app.js")
 
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        script(src="/__/firebase/8.1.2/firebase-analytics.js")
 
-
+        <!-- Initialize Firebase -->
+        script(src="/__/firebase/init.js")
 
         include components/footer.pug
         include components/firebase-scripts.pug

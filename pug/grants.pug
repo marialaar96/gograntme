@@ -24,7 +24,8 @@ html(lang="en")
                             label(for="amount") Grant amount
                             input#amount(type="number", name="amount")
                     .list
-                        - const grants = [{title:"Title of the grant", company:"Company name", amount:1000, deadline:"25/05/2021"},{title:"Title of the grant", company:"Company name", amount:1000, deadline:"25/05/2021"},{title:"Title of the grant", company:"Company name", amount:1000, deadline:"25/05/2021"},{title:"Title of the grant", company:"Company name", amount:1000, deadline:"25/05/2021"}]
+                        //- GET request to get the array of all grants from the database when database is ready
+                        - const grants = [{title:"Title of the grant", company:"Company name", amount:1000, deadline:"25/05/2021"},{title:"Title of the grant", company:"Company name", amount:1000, deadline:"25/05/2021"},{title:"Title of the grant", company:"Company name", amount:1000, deadline:"25/05/2021"},{title:"Title of the grant", company:"Company name", amount:1000, deadline:"25/05/2021"}];
                             .label
                                 h3 Grants
                             .grants
@@ -38,7 +39,7 @@ html(lang="en")
                                             .two
                                                 p= val.company
                                                 button(type="button") 
-                                                    a(href="template.html") Show more
+                                                    a(href=val.title + index + ".html") Show more
                 
 
 
