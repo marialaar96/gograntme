@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pug -w ./pug -o ./public -P"
+    "build": "node grants.js && pug ./pug -o ./public -P"
   },
   "repository": {
     "type": "git",
