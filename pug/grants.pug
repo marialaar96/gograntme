@@ -2,6 +2,12 @@
 html(lang="en")
     head
         include components/meta.pug
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        script(src="/__/firebase/8.1.2/firebase-app.js")
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+        script(src="/__/firebase/8.1.2/firebase-firestore.js")
+
         meta(property="og:title", content="GoGrantMe")
         meta(property="og:description", content="Easily search and apply for journalism grants all over the world.")
         meta(property="og:url", content="https://gograntme.com")
@@ -43,8 +49,27 @@ html(lang="en")
                 
 
 
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        script(type='text/javascript').
+             firebaseConfig = {
+                apiKey: "AIzaSyDTQa5EuHUqo0kMWZRuW4wCyyYD2JoEKDM",
+                authDomain: "gograntme-e066f.firebaseapp.com",
+                databaseURL: "https://gograntme-e066f-default-rtdb.europe-west1.firebasedatabase.app",
+                projectId: "gograntme-e066f",
+                storageBucket: "gograntme-e066f.appspot.com",
+                messagingSenderId: "555069533583",
+                appId: "1:555069533583:web:c26441a7d1fac2a200affa",
+                measurementId: "G-820RZ58R14"
+            };
+            firebase.initializeApp(firebaseConfig)
+            const db = firebase.firestore(); 
+            db.collection("grants").get().then((snapshot, grants) => {
+                snapshot.docs.forEach((doc, grants) => {
+                    console.log(doc.data());
+                    grants.push(doc.data());
 
-
+                });
+            });
         include components/footer.pug
         include components/firebase-scripts.pug
         script(src="scripts/nav.js")
