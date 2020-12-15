@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+html(lang="en")
+
+    head
+
+        include components/meta.pug
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+        script(src="/__/firebase/8.1.2/firebase-app.js")
+
+
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+
+        script(src="/__/firebase/8.1.2/firebase-firestore.js")
+
+
+
+        meta(property="og:title", content="GoGrantMe")
+
+        meta(property="og:description", content="Easily search and apply for journalism grants all over the world.")
+
+        meta(property="og:url", content="https://gograntme.com")
+
+        meta(property="og:image", content="#")
+
+        meta(name="keywords", content="Journalism, Grants, Grant, Apply, Search")
+
+        include components/general-meta-links.pug
+
+        link(rel="stylesheet", href="styles/grants.css")
+
+        title GoGrantMe: Search
+
+    body
+
+        .wrapper
+
+            include components/nav.pug
+
+            .content
+
+                .center
+
+                    .filter
+
+                        .label
+
+                            h3 Filter
+
+                        .filter-options
+
+                            label(for="deadline") Deadline
+
+                            input#deadline(type="date", name="deadline")
+
+                            label(for="amount") Grant amount
+
+                            input#amount(type="number", name="amount")
+
+                    .list
+
+                        //- GET request to get the array of all grants from the database when database is ready
+
+                        - const grants = [{title:"Title of the grant", company:"Company name", amount:1000, deadline:"25/05/2021"},{title:"Title of the grant", company:"Company name", amount:1000, deadline:"25/05/2021"},{title:"Title of the grant", company:"Company name", amount:1000, deadline:"25/05/2021"},{title:"Title of the grant", company:"Company name", amount:1000, deadline:"25/05/2021"}];
+
+                            .label
+
+                                h3 Grants
+
+                            .grants
+
+                                .container
+
+                                    each val, index in grants
+
+                                        .grant
+
+                                            .one
+
+                                                p= val.title
+
+                                                p= `Amount per individual: ${val.amount}`
+
+                                                p= `Deadline: ${val.deadline}`
+
+                                            .two
+
+                                                p= val.company
+
+                                                button(type="button") 
+
+                                                    a(href=val.title + index + ".html") Show more
+
+                
+
+
+
+
+
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+        script(type='text/javascript').
+
+             firebaseConfig = {
+
+                apiKey: "******",
+
+                authDomain: "gograntme-e066f.firebaseapp.com",
+
+                databaseURL: "https://gograntme-e066f-default-rtdb.europe-west1.firebasedatabase.app",
+
+                projectId: "gograntme-e066f",
+
+                storageBucket: "gograntme-e066f.appspot.com",
+
+                messagingSenderId: "555069533583",
+
+                appId: "1:555069533583:web:c26441a7d1fac2a200affa",
+
+                measurementId: "G-820RZ58R14"
+
+            };
+
+            firebase.initializeApp(firebaseConfig)
+
+            const db = firebase.firestore(); 
+
+            db.collection("grants").get().then((snapshot, grants) => {
+
+                snapshot.docs.forEach((doc, grants) => {
+
+                    console.log(doc.data());
+
+                    grants.push(doc.data());
+
+
+
+                });
+
+            });
+
+        include components/footer.pug
+
+        include components/firebase-scripts.pug
+
+        script(src="scripts/nav.js")
